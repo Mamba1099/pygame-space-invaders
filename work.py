@@ -1,36 +1,11 @@
 import pygame
-import os
-import time
 import random
 
+from settings.config import *
+from settings.lasers import *
+from settings.ships import *
+
 pygame.font.init()
-
-WIDTH = 1500
-HEIGHT = 750
-WIN = pygame.display.set_mode((WIDTH, HEIGHT))
-
-# PLAYER SHIP
-YELLOW_SPACE_SHIP = pygame.image.load(os.path.join("assets", "pixel_ship_yellow.png"))
-
-
-GREEN_SPACE_SHIP = pygame.image.load(
-    os.path.join("assets", "pixel_ship_green_small.png")
-)
-BLUE_SPACE_SHIP = pygame.image.load(os.path.join("assets", "pixel_ship_blue_small.png"))
-RED_SPACE_SHIP = pygame.image.load(os.path.join("assets", "pixel_ship_red_small.png"))
-
-
-# lasers
-YELLOW_LASER = pygame.image.load(os.path.join("assets", "pixel_laser_yellow.png"))
-GREEN_LASER = pygame.image.load(os.path.join("assets", "pixel_laser_green.png"))
-BLUE_LASER = pygame.image.load(os.path.join("assets", "pixel_laser_blue.png"))
-RED_LASER = pygame.image.load(os.path.join("assets", "pixel_laser_red.png"))
-
-
-# background
-BG = pygame.transform.scale(
-    pygame.image.load(os.path.join("assets", "background-black.png")), (WIDTH, HEIGHT)
-)
 
 
 class Laser:
