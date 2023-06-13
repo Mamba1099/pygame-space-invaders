@@ -1,5 +1,3 @@
-import pygame
-
 from settings.config import HEIGHT
 from game.laser import Laser
 

@@ -1,9 +1,24 @@
 import pygame
 import random
 
-from settings.config import *
-from settings.lasers import *
-from settings.ships import *
+from settings.config import (
+    HEIGHT,
+    WIN,
+    WIDTH,
+    enemies,
+    lost_count,
+    lives,
+    clock,
+    level,
+    wave_length,
+    FPS,
+    player_vel,
+    laser_vel,
+    enemy_vel,
+    BG,
+    lost,
+    run,
+)
 
 from game.enemy import Enemy
 from game.player import Player
@@ -42,7 +57,7 @@ while run:
     clock.tick(FPS)
 
     if lives <= 0:
-        lost = True
+        lost = True  # noqa
         lost_count += 1
 
     if lost:
